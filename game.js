@@ -40,7 +40,7 @@ function clickedBox(element) {
     // This will check if the player element has the class 'player'
    if(players.classList.contains('player')) {
         element.innerHTML = `<i class='fa-regular fa-circle o-icon'></i>`; 
-        players.classList.add('active');
+        players.classList.remove('active');
         playerSign = 'O'; 
         element.setAttribute('id', playerSign);
     }else{
@@ -75,7 +75,7 @@ function bot (runBot) {
         if(array.length > 0) {
             if(players.classList.contains('player')) {
                 allBox[randomBox].innerHTML = `<i class='${playerXIcon}'></i>`; // changing turn icon
-                players.classList.remove('active');
+                players.classList.add('active');
                 playerSign = 'X';
                 allBox[randomBox].setAttribute('id', playerSign);
             }else{
